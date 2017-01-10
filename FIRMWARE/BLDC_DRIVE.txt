@@ -1,0 +1,88 @@
+Configuration	BLDC_DRIVE
+STM32CubeMX 	4.17.0
+Date	11/12/2016
+MCU	STM32F302R8Tx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ADC1	IN2 Single-ended	ADC1_IN2	PA1
+ADC1	IN9 Single-ended	ADC1_IN9	PC3
+ADC1	IN11 Single-ended	ADC1_IN11	PB0
+ADC1	IN12 Single-ended	ADC1_IN12	PB1
+ADC1	IN15 Single-ended	ADC1_IN15	PA7
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+TIM1	Internal Clock	TIM1_VS_ClockSourceINT	VP_TIM1_VS_ClockSourceINT
+TIM1	PWM Generation CH1	TIM1_CH1	PA8
+TIM1	PWM Generation CH2	TIM1_CH2	PA9
+TIM1	PWM Generation CH3	TIM1_CH3	PA10
+TIM1	ETR IO as Clearing Source	TIM1_ETR	PA12
+TIM2	Internal Clock	TIM2_VS_ClockSourceINT	VP_TIM2_VS_ClockSourceINT
+TIM15	Internal Clock	TIM15_VS_ClockSourceINT	VP_TIM15_VS_ClockSourceINT
+TIM16	Enable_Timer	TIM16_VS_ClockSourceINT	VP_TIM16_VS_ClockSourceINT
+TIM16	PWM Generation CH1	TIM16_CH1	PB4
+USART2	Asynchronous	USART2_RX	PA3
+USART2	Asynchronous	USART2_TX	PA2
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+2	PC13	GPIO_EXTI13	Button
+3	PC14 - OSC32_IN*	RCC_OSC32_IN	
+4	PC15 - OSC32_OUT*	RCC_OSC32_OUT	
+5	PF0-OSC_IN*	RCC_OSC_IN	
+6	PF1-OSC_OUT*	RCC_OSC_OUT	
+8	PC0*	ADC1_IN6	CurrFdbC
+9	PC1*	ADC1_IN7	CurrFdbB
+11	PC3	ADC1_IN9	BemfFdb1
+14	PA0*	ADC1_IN1	CurrFdbA
+15	PA1	ADC1_IN2	BUSV
+16	PA2	USART2_TX	USART_TX
+17	PA3	USART2_RX	USART_RX
+22	PA6	GPIO_Input	DIAGEN
+23	PA7	ADC1_IN15	BemfFdb3
+26	PB0	ADC1_IN11	BemfFdb2
+27	PB1	ADC1_IN12	POTENTIOMETER
+28	PB2	GPIO_Output	LEDRED
+34	PB13	GPIO_Output	LED
+37	PC6	GPIO_Output	TEST2
+39	PC8	GPIO_Output	TEST
+41	PA8	TIM1_CH1	IN1
+42	PA9	TIM1_CH2	IN2
+43	PA10	TIM1_CH3	IN3
+45	PA12	TIM1_ETR	
+46	PA13*	SYS_JTMS-SWDIO	TMS
+49	PA14*	SYS_JTCK-SWCLK	TCK
+51	PC10	GPIO_Output	EN1
+52	PC11	GPIO_Output	EN2
+53	PC12	GPIO_Output	EN3
+55	PB3*	SYS_JTDO-TRACESWO	SWO
+56	PB4	TIM16_CH1	CurrRef
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : BLDC_DRIVE
+Project Folder : /home/damian/stm32/BLDC_DRIVE
+Toolchain / IDE : SW4STM32
+Firmware Package Name and Version : STM32Cube FW_F3 V1.6.0
+
+
+Code Generation Settings : 
+STM32Cube Firmware Library Package : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : Yes
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : Balanced Size/Speed
+
+
+
+
+
+
